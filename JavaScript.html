@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JavaScript</title>
+	</head>
+	<body>
+		<script>
+			
+			document.write("<h1>Cats are Great</h1>"); //use a semi-colon to end a statement
+
+			var number = 1; 		//use var to decalre a variable and = to assign it.
+			var name = "Paul"; 		//no need to declare a variable type.
+			var difNumber; 			//you can leave a variable unassigned
+			var number2=6;
+			var concat = name + " has " + (number+number2) + " cats."; //js will add numbers before converting to text for output
+
+			/* Data Types
+				undefined, null, boolean, string, symbol, number and object
+
+			*/
+
+			//Variable - is like a box to fill with the data you want
+
+			//document.write(/r);
+			//other binary operators
+			//	+	add 
+			//	-	subtract
+			//	*	multiply
+			//	/	divide
+			//	%	mod
+			// += 	just like c++ - take whatever is on the right and add it to the value on the left
+
+			//multipliying floating point or decimal numbers is the same as multiplying integers
+
+			//other unary operators
+			//	++	*same as C++ - incrment before variable by placing before variable, incriment after variable by placing after variable
+			// --	
+
+			/*	Multi line
+				comments
+			*/
+	
+			//Strings
+			//	stored as objects - that means they have properties.
+
+				//length property of a variable
+					//document.write(name.length);			
+					document.write(concat);
+					//document.write(number+number2);
+
+				//objects also have methods 
+					//method vs property
+						//property - just a piece of information
+						//method - can take input, process, and output
+				
+				//substring method of a string variable take two index values and returns the portion of the string that //lies between those two positions	
+
+				//string literals "" or ''
+				// including quotes inside a string > 
+				// escape characters - how to escape a quote so it is not longer considered the end of the string
+
+				document.write( "\"Hello,\" he said.,\n \r \t \t \t ") ;
+				//or
+				//surround your sting with single quotes
+				document.write('\n \n \n \n \r \n \r \n"Hello you crazy catzzzz!" he said');
+				
+				var sub = name.substring(0,2);
+
+				document.write(sub); 	
+				//Alternative variable definintions
+					//const is a constant, a variable that can never change
+
+					//let <-- another way to declate a variable - only can be used within the scope of where it is declared <-- like a local variable.
+					//var is like a global variable 
+
+				//Other string characters
+
+				/*
+					\' single quote
+					\" double quote
+					\\ backslash
+					\n newline
+					\r carriage return
+					\t tab
+					\b backspace
+					\f form feed
+
+				*/
+
+				//Assigning values with the = operator
+					var a; //uninitialized
+					var b = 2;
+					a=7;  // initialized
+					b=a;
+
+					console.log(a);	// console.log allows you to see things in the console.
+					colsole.log(b);
+
+					//variabel and function names ARE case sensative - use camel case - first letter lowercase, every new workd first letter cap
+
+				//Bracket notation - a way to get a charachter at a specific location within a string
+
+				yourName="Paul Robert Davis";
+
+				document.write(yourName[4]);	//0 based indexing means that the first position is at 0
+				yourName[1];
+
+				//Stings are imutable - they can not be altered after created. They can be changed, but you cannot just change an individial charachter, the whole thing has to be replaced.
+
+
+				//function wordBlanks(myNoun, myAdjective, myVerb, myAdverb)
+
+				function wordBlanks(myNoun, myAdjective, myVer, myAdverb)
+					{
+						var result = "";
+						result += "The "+myNoun+" "+myAdjective+" "+myVer +" "+ myAdverb +"." ;
+
+						return result;
+
+					}
+
+				document.write(wordBlanks("cat", "goofy", "ate","ravenously"));
+
+				//Arrays - store several pieces of data is one place 
+					// start and end with brackets
+					// seperated by commans
+
+					//an array can consist of multiple arrarys
+
+					//bracket notation can be used to handel specific elements in an array
+
+					//array indexes can be used to modify arrays (just like c++)
+
+					myExampleArray=[[1,2,3],[4,5,6],[7,8,9],[[10,11,12],13,14]]; 	//note that this array has 3 levels
+
+					console.log(myExampleArray[0,0]);
+
+					//function push() can be used to append an array
+
+					myExampleArray.push([100,101,102])
+
+					//manipulate arrays with pop() - remove elements and return
+
+					var removedFromArray=myExampleArray.pop();
+
+					//manipulate arrays with shift() - removes the first element of an array
+
+					removedFromArray=myExampleArray.shift();
+
+					//add to the begining of an array
+
+					myExampleArray.unshift(100);
+
+					
+
+
+
+
+		</script>
+	</body>
+</html>
